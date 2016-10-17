@@ -37,7 +37,7 @@ while true; do
     cat /etc/keepalived/keepalived.conf
 
     echo "Starting Keepalived..."
-    /usr/sbin/keepalived --dont-fork --dump-conf --log-console --log-detail --vrrp
+    /usr/sbin/keepalived --dont-fork --log-console --log-detail --vrrp
 
     pid=$(pidof keepalived)
 
