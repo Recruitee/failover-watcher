@@ -2,7 +2,7 @@ FROM ruby:2.2.5-alpine
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
-    apk --update -t add libressl grep sed bash keepalived && \
+    apk --update -t add libressl grep sed bash iproute2 tcpdump keepalived && \
     rm -f /var/cache/apk/* /tmp/*
 
 RUN gem install ovh-rest
